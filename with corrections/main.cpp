@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	std::cout << Module2::getMyName() << "\n";
 
 	using namespace Module1;
-	std::cout << getMyName() << "\n"; // (A)
+	std::cout << getMyName() << "\n"; // (A) //происходит обращение к пространству имён Module1 и вывод работы его функции getmyName на экран
 	std::cout << Module2::getMyName() << "\n";
 
 	//using namespace Module2; // (B)
@@ -19,8 +19,8 @@ int main(int argc, char** argv)
 	//необходимо использовать объявление, как изначально написано строкой ниже:
 
 	using Module2::getMyName;
-	std::cout << getMyName() << "\n"; // (D)
+	std::cout << getMyName() << "\n"; // (D) //
+	//или использовать std::cout << Module2::getMyName()
 	
-	//èëè èñïîëüçîâàòü std::cout << Module2::getMyName()
 	return 0;
 }
