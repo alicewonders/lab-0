@@ -16,9 +16,10 @@ int main(int argc, char** argv)
 	using namespace Module1;
 	sort_strings(file_str);
 
+	ofstream fout("out.txt");
 	for (string i : file_str)
 	{
-		cout << i << endl;
+		fout << i << endl;
 	}
 
 	return 0;
