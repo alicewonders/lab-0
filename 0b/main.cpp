@@ -5,13 +5,13 @@ int main(int argc, char** argv)
 	string str = { '\0' };
 	list <string> file_str;
 
-	ifstream fin(argv[1]);
-	ofstream fout(argv[2]);
-
 	if ((argc > 3) || (argc < 3))
 	{
 		cout << "Incorrect number of arguments. Try again";
 	}
+	
+	ifstream fin(argv[1]);
+	ofstream fout(argv[2]);
 
 	if (!fin.is_open())
 	{
